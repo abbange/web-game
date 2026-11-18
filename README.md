@@ -31,3 +31,13 @@ npm start
 ## 배포
 
 WebSocket을 지원하는 Node.js 호스팅이면 됩니다. 시작 명령은 `npm start`, 포트는 `PORT` 환경 변수를 따릅니다.
+
+### Render로 배포하기
+
+저장소에 `render.yaml`이 들어 있어 설정을 직접 입력할 필요가 없습니다.
+
+1. https://render.com 에 GitHub 계정으로 가입합니다.
+2. 대시보드에서 **New → Blueprint**를 누르고 이 저장소를 선택합니다.
+3. **Apply**를 누르면 빌드 후 `https://sky-squad-xxxx.onrender.com` 형태의 주소가 만들어집니다.
+
+방 정보가 서버 메모리에 있으므로 인스턴스는 1개로 유지해야 합니다. 서버가 재시작되면 진행 중인 방은 사라집니다.

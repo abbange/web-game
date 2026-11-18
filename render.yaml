@@ -1,0 +1,12 @@
+# Render 배포 설정 (https://render.com). 저장소를 Blueprint로 연결하면 이 파일대로 서비스가 만들어진다.
+# 방 정보가 서버 메모리에 있으므로 인스턴스는 반드시 1개로 유지한다.
+services:
+  - type: web
+    name: sky-squad
+    runtime: node
+    plan: free
+    region: singapore
+    buildCommand: npm ci
+    startCommand: npm start
+    healthCheckPath: /healthz
+    autoDeploy: true
